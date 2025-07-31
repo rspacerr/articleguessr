@@ -18,7 +18,7 @@ export default function SearchBar() {
       </label>
       <button type="submit" className="p-2.5 ml-2.5 text-sm font-medium text-white bg-blue-500 rounded-lg hover:bg-blue-600">
         Submit
-      </button>      
+      </button>
     </>
   )
 }
