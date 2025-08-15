@@ -36,7 +36,7 @@ sections = []
 def redact_info(input: str) -> str:
     """ Attempts to remove revealing information from input string """
     if 'token' not in session:
-        # invalid session
+        # TODO: invalid session
         pass
 
     title = session['token'].get_title()
@@ -75,8 +75,9 @@ async def choose_article():
 @app.route("/api/section")
 def get_section():
     if 'token' not in session:
-        # invalid session, force reload page
+        # TODO: invalid session, force reload page
         pass
+
     rand = random.randint(0, len(sections))
     section = sections[rand]
     print(jsonify({
@@ -89,8 +90,8 @@ def get_section():
     }), 201
 
 def debug_env():
-    print(f"usr_agent: {USER_AGENT}");
-    print(f"port: {PORT}");
+    print(f"usr_agent: {USER_AGENT}")
+    print(f"port: {PORT}")
 
 if __name__ == "__main__":
     app.run(debug=True, port=PORT)
